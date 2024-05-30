@@ -1,9 +1,9 @@
 {
-  "name": "til.jing-tech.me",
-  "description": "Today I learned",
+  "name": "starter-blog",
+  "description": "A blog starter template for Next.js with Tailwind CSS and MDX.",
   "author": {
     "name": "JingHuang Su",
-    "url": "https://www.jing-tech.me"
+    "url": "https://starter-blog-blue.vercel.app"
   },
   "private": true,
   "scripts": {
@@ -95,6 +95,5 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  },
-  "packageManager": "yarn@3.6.1"
+  }
 }
