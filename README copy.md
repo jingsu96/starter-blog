@@ -1,13 +1,13 @@
-# Template for personal blogs
+# Today I Learned
 
-This website is inspired by [Timothy Lin's Tailwind Next.js starter blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) and [Onur Dev's personal blog](https://github.com/suyalcinkaya/onur.dev).
+A collection of useful things I've learned. This website is inspired by [Onur Dev](https://github.com/suyalcinkaya/onur.dev) and [Timothy Lin](https://github.com/timlrx/tailwind-nextjs-starter-blog).
 
 ## Overview
 
 ### Clone the repo
 
 ```bash
-git clone https://github.com/jingsu96/starter-blog
+git clone https://github.com/jingsu96/todayIlearned.git
 ```
 
 2. Personalize `siteMetadata.js` (site related information)
@@ -135,9 +135,20 @@ See [Next.js on Netlify](https://docs.netlify.com/integrations/frameworks/next-j
 
 **Note**: Deploying on Github pages require addition modifications to the base path. Please refer to the FAQ for more information.
 
+## Frequently Asked Questions
+
+- [How can I add a custom MDX component?](/faq/custom-mdx-component.md)
+- [How can I customize the `kbar` search?](/faq/customize-kbar-search.md)
+- [How do I deploy on Github pages?](/faq/github-pages-deployment.md)
+
+Create a `.env` file similar to [`.env.example`](https://github.com/jingsu96/todayilearned/blob/master/.env.example).
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
 - [shadcn/ui](https://ui.shadcn.com)
+- [Contentful](https://www.contentful.com)
+- [Raindrop](https://raindrop.io)
+- [Supabase](https://supabase.com)
 - [Vercel](https://vercel.com)

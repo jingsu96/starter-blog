@@ -1,0 +1,44 @@
+---
+title: Advanced .md file
+date: '2021-05-02'
+tags: ['example']
+draft: false
+summary: 'Example of a markdown file with nested routing and multi-part posts'
+topic: 'Advacned'
+---
+
+# Nested Routes
+
+The blog template supports posts in nested sub-folders. This helps in organisation and can be used to group posts of similar content e.g. a multi-part series. This post is itself an example of a nested route! It's located in the `/data/blog/nested-route` folder.
+
+## How
+
+Simplify create multiple folders inside the main `/data/blog` folder and add your `.md`/`.mdx` files to them. You can even create something like `/data/blog/nested-route/deeply-nested-route/my-post.md`
+
+## Code
+
+<Sandpack lang="static">
+
+```html file=index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
+</html>
+```
+
+```css file=styles.css
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+```
+
+</Sandpack>

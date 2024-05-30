@@ -1,0 +1,211 @@
+/* Default theme */
+html .sandpack {
+  --sp-colors-accent: var(--jt-c-indigo-1);
+  --sp-colors-clickable: #959da5;
+  --sp-colors-disabled: #24292e;
+  --sp-colors-error: #811e18;
+  --sp-colors-error-surface: #ffcdca;
+  --sp-colors-surface1: #fff;
+  --sp-colors-surface2: #e4e7eb;
+
+  --sp-syntax-color-plain: #24292e;
+  --sp-syntax-color-comment: #6a737d;
+  --sp-syntax-color-keyword: #d73a49;
+  --sp-syntax-color-tag: #22863a;
+  --sp-syntax-color-punctuation: #24292e;
+  --sp-syntax-color-definition: #6f42c1;
+  --sp-syntax-color-property: #005cc5;
+  --sp-syntax-color-static: #032f62;
+  --sp-syntax-color-string: #032f62;
+}
+
+/* Dark theme */
+html.dark .sp-wrapper {
+  --sp-colors-accent: var(--jt-c-indigo-1);
+  --sp-colors-clickable: #999;
+  --sp-colors-disabled: #fff;
+  --sp-colors-error: #811e18;
+  --sp-colors-error-surface: #ffcdca;
+  --sp-colors-surface1: #16181d;
+  --sp-colors-surface2: #343a46;
+
+  --sp-syntax-color-plain: #ffffff;
+  --sp-syntax-color-comment: #757575;
+  --sp-syntax-color-keyword: #77b7d7;
+  --sp-syntax-color-tag: #dfab5c;
+  --sp-syntax-color-punctuation: #ffffff;
+  --sp-syntax-color-definition: #86d9ca;
+  --sp-syntax-color-property: #77b7d7;
+  --sp-syntax-color-static: #c64640;
+  --sp-syntax-color-string: #977cdc;
+}
+
+.sp-tabs,
+.sp-tab-button:hover {
+  background: none !important;
+}
+
+.sp-stack .sp-code-editor,
+.sp-tabs .sp-tabs-scrollable-container {
+  overflow: hidden;
+}
+
+.sp-cm {
+  -webkit-text-size-adjust: none !important;
+  padding: 0 !important;
+}
+
+html.light .sp-cm {
+  color: #24292e;
+  background-color: white;
+}
+
+.sandpack .sp-console-item:not(:first-child) {
+  border: none;
+}
+
+.cm-wrap {
+  background: transparent !important;
+}
+.sp-pre-placeholder {
+  display: hidden !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding: 18px var(--sp-space-3) !important;
+  font-size: 13.6px !important;
+  line-height: 24px !important;
+  height: 100%;
+  overflow: scroll;
+  background-color: transparent;
+}
+.text-xl .sp-pre-placeholder {
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+.sp-cm .cm-scroller {
+  overflow: auto !important;
+  padding: 18px 0 !important;
+}
+.sp-cm .cm-gutters {
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .sp-tabs .sp-tab-button {
+    margin: 0 12px 0 0;
+  }
+}
+
+/* Make focus rings work */
+.sp-tab-button {
+  transition: none !important;
+}
+.sp-tab-button:focus {
+  outline: revert !important;
+}
+.sp-tab-button:focus-visible {
+  box-shadow: none !important;
+}
+.sp-cm:focus-visible {
+  box-shadow: inset 0 0 0 4px rgba(20, 158, 202, 0.4) !important;
+  padding-left: 0px !important;
+}
+html.dark .cm-activeLine {
+  background-color: #343a46 !important;
+}
+.cm-line {
+  padding: 0 var(--sp-space-3) !important;
+}
+.cm-lineNumbers {
+  padding-left: var(--sp-space-1) !important;
+  padding-right: var(--sp-space-1) !important;
+}
+
+/* For iOS: prevent browser zoom when clicking on sandbox. */
+@media screen and (max-width: 768px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    .cm-content {
+      font-size: initial;
+    }
+    .DocSearch-Input {
+      font-size: initial;
+    }
+  }
+}
+
+.sandpack .sp-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: var(--jt-c-bg-alt);
+
+  -webkit-mask-image: -webkit-radial-gradient(
+    var(--sp-colors-surface1),
+    var(--sp-colors-surface1)
+  ); /*safest way to make all corner rounded */
+
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: initial;
+
+  gap: 1px;
+}
+
+.sandpack .sp-layout > .sp-stack {
+  flex: 1 1 0px;
+  height: var(--sp-layout-height);
+}
+
+@media (min-width: 400px) {
+  .sandpack .sp-layout > .sp-stack {
+    height: 200px;
+  }
+}
+
+.sp-editor {
+  background: transparent;
+}
+
+.sandpack .sp-layout.sp-layout-expanded > .sp-stack:nth-child(1) {
+  /* Clicking "show more" lets mobile editor go full height. */
+  max-height: 600px;
+  height: auto;
+}
+
+.sandpack .sp-layout.sp-layout-expanded > .sp-stack:nth-child(2) {
+  /* Clicking "show more" lets mobile preview go full height. */
+  max-height: unset;
+  height: auto;
+}
+
+@media (min-width: 1280px) {
+  .sandpack .sp-layout > .sp-stack:nth-child(1) {
+    /* On desktop, clamp height by pixels instead. */
+    height: auto;
+    min-height: unset;
+    max-height: 406px;
+  }
+  .sandpack .sp-layout > .sp-stack:nth-child(2) {
+    /* On desktop, clamp height by pixels instead. */
+    height: auto;
+    min-height: unset;
+    max-height: 406px;
+  }
+  .sandpack .sp-layout.sp-layout-expanded > .sp-stack:nth-child(1) {
+    max-height: 600px;
+  }
+  .sandpack .sp-layout.sp-layout-expanded > .sp-stack:nth-child(2) {
+    max-height: unset;
+  }
+}
+
+.sandpack .sp-layout .sandpack-expand {
+  border-left: none;
+  margin-left: 0;
+}
+
+.expandable-callout .sp-stack:nth-child(2) {
+  min-width: 431px;
+  min-height: 40vh;
+  max-height: 40vh;
+}
