@@ -116,7 +116,7 @@ export const CONTENT_TYPES = {
 
 export const WORK_EXPERIENCE = [
   {
-    name: 'Houzz',
+    name: 'Google',
     link: 'https://www.google.com',
     image: '/static/images/google.png',
     experience: [
